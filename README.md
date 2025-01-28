@@ -1,6 +1,9 @@
-# Secure Web Tokens (SWT)
+# Secure Web Token (SWT)
 
-This is a lightweight and secure authentication system built with **Node.js**, **Express**, **ValKey** (Redis fork), and **PostgreSQL**. Unlike JWT-based approaches, it avoids common pitfalls like token theft by using **stateful tokens** with **device-specific fingerprints** for added security.  
+This is a lightweight and secure authentication system built with **Node.js**, **Express**, **ValKey** (Redis fork), and **PostgreSQL**. Unlike JWT-based approaches, it avoids common pitfalls like token theft by using **stateful tokens** with **device-specific fingerprints** for added security.
+
+You can read my full article on [dev.to](https://dev.to/santikzz/jwt-sucks-so-i-made-my-own-2lmj)
+
 
 ## 🚀 Features  
 - **Stateful Tokens**: Tokens are stored in ValKey for quick lookup and easy revocation.  
