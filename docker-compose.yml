@@ -1,0 +1,31 @@
+version: "3.8"
+
+services:
+
+  valkey:
+    image: valkey/valkey:latest
+    container_name: valkey
+    restart: always
+    ports:
+      - "6379:6379"
+    environment:
+      - VALKEY_PASSWORD=password!123
+    volumes:
+      - valkey_data:/data
+
+  postgres:
+    image: postgres:latest
+    container_name: postgres
+    restart: always
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: postgres_user
+      POSTGRES_PASSWORD: password!123
+      POSTGRES_DB: postgres_db
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  valkey_data:
+  postgres_data:
